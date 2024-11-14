@@ -1,25 +1,5 @@
 #!/bin/bash
 
-# Credits:
-#	- DasChaos
-# To use this script, you must have a working version of GTA V installed through the
-# native Steam client. Once you have that, do the following:
-#
-#
-# 1. create a new empty directory
-# 2. copy this script into that directory and mark it as executable
-# 3. run this script
-# 4. run altv.sh to play
-#
-# These steps must be repeated every time you change Proton versions.
-#
-# If you have issues getting alt:V to boot, consider removing `linuxCompatibility = true`
-# from altv.toml.
-#
-# Known good proton versions:
-# * Proton tkg
-
-
 set -e
 BRANCH="release"
 PREFIX_PATH=""
