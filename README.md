@@ -3,6 +3,7 @@ alt:V installer script for the Steam version only
 
 > [!IMPORTANT]  
 > Proton-tkg is so far the only known proton version to work.
+> The install script will download the latest one.
 
 # Instructions
 1. create a new empty directory
