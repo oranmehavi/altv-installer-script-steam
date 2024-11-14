@@ -104,7 +104,7 @@ function createStartScript
 	cat > altv.sh << EOF
 #!/bin/bash
 
-STEAM_COMPAT_CLIENT_INSTALL_PATH=$STEAM_PATH STEAM_COMPAT_DATA_PATH=$PREFIX_PATH "proton-tkg/proton" run \$(realpath altv.exe)
+PROTON_ENABLE_NVAPI=1 STEAM_COMPAT_CLIENT_INSTALL_PATH=$STEAM_PATH STEAM_COMPAT_DATA_PATH=$PREFIX_PATH "$(pwd)/proton-tkg/proton" run \$(realpath altv.exe)
 EOF
 
 	return 0
@@ -172,6 +172,7 @@ function fixActivationError
 function cleanUP
 {
 	rm -rf winestreamproxy-2.0.3-amd64.tar.gz winestreamproxy-2.0.3-amd64
+	rm proton-tkg-build.zip
 }
 
 if [[ "$EUID" -eq 0 ]]; then
