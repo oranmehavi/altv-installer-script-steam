@@ -91,6 +91,7 @@ function createConfigFile
 branch = '$BRANCH'
 gtaPlatform = 'rgl'
 gtapath = '$GTA_PATH'
+useSharedTextures=false
 EOF
 	return 0
 }
