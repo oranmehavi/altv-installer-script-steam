@@ -105,7 +105,7 @@ function createStartScript
 	cat > altv.sh << EOF
 #!/bin/bash
 
-PROTON_ENABLE_NVAPI=1 STEAM_COMPAT_CLIENT_INSTALL_PATH=$STEAM_PATH STEAM_COMPAT_DATA_PATH=$PREFIX_PATH "$(pwd)/proton-tkg/proton" run \$(realpath altv.exe)
+PROTON_ENABLE_NVAPI=1 STEAM_COMPAT_CLIENT_INSTALL_PATH=$STEAM_PATH STEAM_COMPAT_DATA_PATH=$PREFIX_PATH "$(pwd)/proton-tkg/proton" run \$(realpath altv.exe) -connecturl "\$@"
 EOF
 
 	return 0
