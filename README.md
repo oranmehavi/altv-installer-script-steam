@@ -12,5 +12,12 @@ alt:V installer script for the Steam version only
 4. run this script.
 5. run altv.sh to play.
 
+# Getting logs
+In order to get logs, you will need to do the following steps:
+1. Add `altv.sh` to Steam as a non-Steam game.
+2. Set launch arguments to `PROTON_LOG=1 %command%`.
+3. Run `altv.sh` through Steam.
+4. The log will be found in the home directory by the name `steam-<big_random_number>.log`.
+
 # Credits
 Daschaos
