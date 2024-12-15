@@ -222,14 +222,23 @@ else
     fi
 fi
 
-
-
 echo $GTA_PATH
 echo "Fixing activation error prompt"
 fixActivationError
 
+echo "Are you using a Steam Deck?"
+echo -e " 1 - Yes\n 2 - No"
+read -r ans
+
 # Getting prefix path
-PREFIX_PATH="${GTA_PATH%/common*}/compatdata/271590"
+case $ans in
+	1)
+	PREFIX_PATH="$HOME/.steam/root/steamapps/compatdata/271590"
+	;;
+	2)
+	PREFIX_PATH="${GTA_PATH%/common*}/compatdata/271590"
+	;;
+esac
 
 PROTON_PATH=$(head -3 "$PREFIX_PATH/config_info" | tail -1)
 if [[ $PROTON_PATH == *"files"* ]]; then
